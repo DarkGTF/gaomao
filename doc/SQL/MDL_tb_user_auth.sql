@@ -9,7 +9,7 @@ create table if NOT EXISTS  tb_user_auth  (
 	create_time datetime DEFAULT NULL comment '创建时间',
 	create_user int(32) DEFAULT NULL COMMENT '创建人',
 	last_edit_time datetime default NULL COMMENT '最后编辑时间',
-	is_del SMALLINT  DEFAULT 0 COMMENT '逻辑删除标志',
+	deleted SMALLINT  DEFAULT 0 COMMENT '逻辑删除标志',
 	PRIMARY KEY(`user_auth_id`),
 	UNIQUE INDEX Upk_user_id (`user_id`) USING BTREE,
 	UNIQUE INDEX Upk_user_name (`username`) USING BTREE

@@ -1,0 +1,45 @@
+#Tomcat
+server:
+  port: 25852
+  servlet:
+    context-path: /gaomao
+
+# DataSource todo 读写分离
+spring:
+  ## 数据源配置
+  datasource:
+    username: test
+    password: test
+    url: jdbc:mysql://10.129.130.168:3306/gaomao?serverTimeZone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: gaomao-datasource
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        jdbc:
+          time_zone: Shanghai
+        hbm2ddl:
+          auto: validate
+  ## Redis配置
+  redis:
+    host: ${REDIS_HOST:10.1.14.1459}
+    password: ${REDIS_PW:moyang}
+
+# 日志级别配置
+logging:
+  level:
+    root: info
+    com.cyou: debug
+
+# 系统自定义配置
