@@ -1,4 +1,4 @@
---- 创建用户信息表
+-- 创建用户信息表
 drop table if EXISTS tb_user_info;
 create table if not EXISTS tb_user_info (
     user_id int(32)  not NULL COMMENT 'Id',
@@ -11,9 +11,9 @@ create table if not EXISTS tb_user_info (
     create_time datetime not null comment '创建时间',
     create_user int(32) DEFAULT NULL comment '创建者',
     last_edit_time datetime  default null comment  '最后修改时间',
-    deleted smallint DEFAULT 0 COMMENT '逻辑删除标志:0,未删除，1已删除',
+    deleted boolean DEFAULT 0 COMMENT '逻辑删除标志:0,未删除，1已删除',
     PRIMARY key (`user_id`),
     UNIQUE index U_pk_name (`username`)  using BTREE
 ) engine = INNODB;
 
----- 2019-12-24
+-- 2019-12-24

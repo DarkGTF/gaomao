@@ -28,7 +28,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
         jdbc:
-          time_zone: Shanghai
+          time_zone: Asia/Shanghai
         hbm2ddl:
           auto: validate
   ## Redis配置

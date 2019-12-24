@@ -15,7 +15,7 @@ import java.util.Date;
  * @date 2019-12-24
  * @since 1.0.0
  */
-@Entity(name = "t_user_auth")
+@Entity(name = "tb_user_auth")
 @Data
 public class UserAuth {
 
@@ -51,7 +51,7 @@ public class UserAuth {
     /**
      * 创建用户
      */
-    private String createUser;
+    private Integer createUser;
 
     /**
      * 最后更新时间
@@ -61,6 +61,6 @@ public class UserAuth {
     /**
      * 逻辑删除标识
      */
-    private boolean deleted;
+    private Boolean deleted = Boolean.FALSE;
 
 }

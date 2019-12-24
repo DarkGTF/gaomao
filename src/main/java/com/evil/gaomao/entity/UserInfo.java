@@ -14,7 +14,7 @@ import java.util.Date;
  * @since 1.0.0
  */
 @Data
-@Entity(name = "t_user_info")
+@Entity(name = "tb_user_info")
 public class UserInfo {
 
     @Id
@@ -54,7 +54,7 @@ public class UserInfo {
     /**
      * 创建时间
      */
-    private Date creatTime;
+    private Date createTime;
 
     /**
      * 创建用户
@@ -64,11 +64,11 @@ public class UserInfo {
     /**
      * 最后更新时间
      */
-    private String lastEditTime;
+    private Date lastEditTime;
 
     /**
      * 逻辑删除标识
      */
-    private boolean deleted;
+    private Boolean deleted = Boolean.FALSE;
 
 }
