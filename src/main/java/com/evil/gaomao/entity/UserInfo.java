@@ -1,6 +1,12 @@
 package com.evil.gaomao.entity;
 
+import com.evil.gaomao.common.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.apache.ibatis.annotations.Update;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +19,10 @@ import java.util.Date;
  * @date 2019-12-24
  * @since 1.0.0
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Entity(name = "tb_user_info")
-public class UserInfo {
+public class UserInfo extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,16 +61,19 @@ public class UserInfo {
     /**
      * 创建时间
      */
+    @CreatedDate
     private Date createTime;
 
     /**
      * 创建用户
      */
+    @CreatedBy
     private Integer createUser;
 
     /**
      * 最后更新时间
      */
+    @LastModifiedDate
     private Date lastEditTime;
 
     /**
@@ -71,4 +81,8 @@ public class UserInfo {
      */
     private Boolean deleted = Boolean.FALSE;
 
+    @Override
+    public Integer getId() {
+        return this.userId;
+    }
 }

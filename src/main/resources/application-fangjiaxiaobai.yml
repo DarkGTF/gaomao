@@ -33,9 +33,11 @@ spring:
           auto: validate
   ## Redis配置
   redis:
-    host: ${REDIS_HOST:10.1.14.1459}
+    host: ${REDIS_HOST:10.1.14.159}
     password: ${REDIS_PW:moyang}
-
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
 # 日志级别配置
 logging:
   level:

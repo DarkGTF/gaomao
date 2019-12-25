@@ -1,11 +1,17 @@
 package com.evil.gaomao.entity;
 
+import com.evil.gaomao.common.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Base64;
 import java.util.Date;
 
 /**
@@ -15,9 +21,10 @@ import java.util.Date;
  * @date 2019-12-24
  * @since 1.0.0
  */
+@EqualsAndHashCode(callSuper = true)
 @Entity(name = "tb_user_auth")
 @Data
-public class UserAuth {
+public class UserAuth extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,16 +53,19 @@ public class UserAuth {
     /**
      * 创建时间
      */
+    @CreatedDate
     private Date createTime;
 
     /**
      * 创建用户
      */
+    @CreatedBy
     private Integer createUser;
 
     /**
      * 最后更新时间
      */
+    @LastModifiedDate
     private Date lastEditTime;
 
     /**
@@ -63,4 +73,8 @@ public class UserAuth {
      */
     private Boolean deleted = Boolean.FALSE;
 
+    @Override
+    public Integer getId() {
+        return this.userAuthId;
+    }
 }
