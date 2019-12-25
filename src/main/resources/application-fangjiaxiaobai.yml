@@ -43,5 +43,8 @@ logging:
   level:
     root: info
     com.cyou: debug
-
+gaomao:
+  developers:
+    - 方小白
+    - 巧克力
 # 系统自定义配置

@@ -1,6 +1,6 @@
 package com.evil.gaomao.entity;
 
-import com.evil.gaomao.common.BaseEntity;
+import com.evil.gaomao.common.entity.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.data.annotation.CreatedBy;
@@ -11,7 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Base64;
 import java.util.Date;
 
 /**

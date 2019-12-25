@@ -1,9 +1,8 @@
 package com.evil.gaomao.entity;
 
-import com.evil.gaomao.common.BaseEntity;
+import com.evil.gaomao.common.entity.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.apache.ibatis.annotations.Update;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;

@@ -1,5 +1,7 @@
 package com.evil.gaomao.controller;
 
+import com.evil.gaomao.common.constant.ResponseCode;
+import com.evil.gaomao.common.entity.RestResult;
 import com.evil.gaomao.entity.UserInfo;
 import com.evil.gaomao.service.UserService;
 import io.swagger.annotations.Api;
@@ -25,11 +27,11 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("{userId}")
-    public UserInfo get(@PathVariable("userId") Integer userId) {
+    public RestResult<UserInfo> get(@PathVariable("userId") Integer userId) {
         Assert.notNull(userId, "userId 不能为空");
         UserInfo userInfo = userService.get(userId);
         log.debug("根据 userId = [{}] 查询到一条数据", userId);
-        return userInfo;
+        return RestResult.newSuccessInstance(userInfo);
     }
 
     @Autowired

@@ -1,4 +1,4 @@
-package com.evil.gaomao.common;
+package com.evil.gaomao.common.entity;
 
 import lombok.Getter;
 import lombok.Setter;
