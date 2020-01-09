@@ -47,4 +47,16 @@ gaomao:
   developers:
     - 方小白
     - 巧克力
+  url:
+    notfilter:
+      urls:
+      - "/login**"
+      - "/app/getVerificationCode"
+      - "/app/login"
+      - "/doLogin**"
+      - "/favicon.ico"
+  jwt:
+    expiration: 6000
+    secret: gaomao
+    token-header: authentication
 # 系统自定义配置

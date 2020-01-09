@@ -1,9 +1,15 @@
 package com.evil.gaomao.service;
 
+import com.evil.gaomao.common.model.LoginBean;
 import com.evil.gaomao.entity.UserInfo;
 import com.evil.gaomao.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 /**
  * 用户
@@ -13,7 +19,7 @@ import org.springframework.stereotype.Service;
  * @since 1.0.0
  */
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
 
     private UserRepository userRepository;
 
@@ -27,9 +33,19 @@ public class UserService {
         return userRepository.getOne(userId);
     }
 
+    public Optional<UserInfo> findOneByEmail(String email) {
+        return userRepository.findOneByEmail(email);
+    }
 
     @Autowired
     public void setUserRepository(UserRepository userRepository) {
         this.userRepository = userRepository;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        Optional<UserInfo> oneByEmail = findOneByEmail(s);
+        UserInfo userInfo = oneByEmail.orElse(null);
+        return LoginBean.fromUser(userInfo);
     }
 }

@@ -4,6 +4,8 @@ import com.evil.gaomao.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 /**
  * 用户Repository
  *
@@ -14,5 +16,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends JpaRepository<UserInfo, Integer> {
 
-
+    Optional<UserInfo> findOneByEmail(String email);
 }
