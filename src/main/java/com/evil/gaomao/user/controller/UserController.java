@@ -1,4 +1,4 @@
-package com.evil.gaomao.controller;
+package com.evil.gaomao.user.controller;
 
 import com.evil.gaomao.common.constant.ResponseCode;
 import com.evil.gaomao.common.entity.RestResult;

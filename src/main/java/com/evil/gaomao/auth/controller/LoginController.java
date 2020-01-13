@@ -1,4 +1,4 @@
-package com.evil.gaomao.controller;
+package com.evil.gaomao.auth.controller;
 
 import io.swagger.annotations.Api;
 

@@ -1,4 +1,4 @@
-package com.evil.gaomao.entity;
+package com.evil.gaomao.user.entity;
 
 import com.evil.gaomao.common.entity.BaseEntity;
 import lombok.Data;
@@ -14,24 +14,17 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * 用户权限信息
- *
  * @author fangjiaxiaobai@gmail.com
  * @date 2019-12-24
  * @since 1.0.0
  */
 @EqualsAndHashCode(callSuper = true)
-@Entity(name = "tb_user_auth")
 @Data
-public class UserAuth extends BaseEntity {
+@Entity(name = "tb_user_info")
+public class UserInfo extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer userAuthId;
-
-    /**
-     * 用户Id
-     */
     private Integer userId;
 
     /**
@@ -40,14 +33,29 @@ public class UserAuth extends BaseEntity {
     private String username;
 
     /**
-     * 密码
+     * 头像id
      */
-    private String password;
+    private Integer profileImg;
 
     /**
-     * 权限类型
+     * 邮箱
      */
-    private String authType;
+    private String email;
+
+    /**
+     * 性别
+     */
+    private String gender;
+
+    /**
+     * 用户状态
+     */
+    private String enableStatus;
+
+    /**
+     * 用户类型
+     */
+    private String userType;
 
     /**
      * 创建时间
@@ -74,6 +82,6 @@ public class UserAuth extends BaseEntity {
 
     @Override
     public Integer getId() {
-        return this.userAuthId;
+        return this.userId;
     }
 }

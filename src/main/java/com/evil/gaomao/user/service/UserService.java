@@ -1,4 +1,4 @@
-package com.evil.gaomao.service;
+package com.evil.gaomao.user.service;
 
 import com.evil.gaomao.common.model.LoginBean;
 import com.evil.gaomao.entity.UserInfo;
