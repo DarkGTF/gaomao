@@ -1,7 +1,7 @@
 package com.evil.gaomao.user;
 
 import com.evil.gaomao.common.entity.RestResult;
-import com.evil.gaomao.controller.UserController;
+import com.evil.gaomao.user.controller.UserController;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

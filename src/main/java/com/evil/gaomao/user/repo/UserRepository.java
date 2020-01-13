@@ -1,6 +1,6 @@
-package com.evil.gaomao.repo;
+package com.evil.gaomao.user.repo;
 
-import com.evil.gaomao.entity.UserInfo;
+import com.evil.gaomao.user.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

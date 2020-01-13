@@ -1,7 +1,7 @@
 package com.evil.gaomao.config.security;
 
 import com.evil.gaomao.config.security.filter.JwtAuthenticationFilter;
-import com.evil.gaomao.service.UserService;
+import com.evil.gaomao.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

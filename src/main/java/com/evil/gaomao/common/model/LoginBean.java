@@ -1,6 +1,6 @@
 package com.evil.gaomao.common.model;
 
-import com.evil.gaomao.entity.UserInfo;
+import com.evil.gaomao.user.entity.UserInfo;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

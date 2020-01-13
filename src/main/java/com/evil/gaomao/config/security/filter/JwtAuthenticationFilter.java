@@ -5,7 +5,7 @@ import com.evil.gaomao.common.model.LoginBean;
 import com.evil.gaomao.common.utils.JwtUtil;
 import com.evil.gaomao.config.security.JwtProperties;
 import com.evil.gaomao.config.security.UrlFilterProperties;
-import com.evil.gaomao.service.UserService;
+import com.evil.gaomao.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

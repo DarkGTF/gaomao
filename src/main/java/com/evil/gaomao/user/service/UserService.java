@@ -1,8 +1,8 @@
 package com.evil.gaomao.user.service;
 
 import com.evil.gaomao.common.model.LoginBean;
-import com.evil.gaomao.entity.UserInfo;
-import com.evil.gaomao.repo.UserRepository;
+import com.evil.gaomao.user.repo.UserRepository;
+import com.evil.gaomao.user.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
