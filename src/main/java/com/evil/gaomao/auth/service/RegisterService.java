@@ -1,4 +1,4 @@
-package com.evil.gaomao.user.service;
+package com.evil.gaomao.auth.service;
 
 /**
  * 用户注册
