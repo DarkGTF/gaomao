@@ -1,4 +1,4 @@
-package com.evil.gaomao.service;
+package com.evil.gaomao.user.service;
 
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.evil.gaomao.entity;
+package com.evil.gaomao.auth.entity;
 
 import lombok.Data;
 
@@ -9,16 +9,23 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
+ * 用户权限信息
+ *
  * @author fangjiaxiaobai@gmail.com
  * @date 2019-12-24
  * @since 1.0.0
  */
+@Entity(name = "tb_user_auth")
 @Data
-@Entity(name = "tb_user_info")
-public class UserInfo {
+public class UserAuth {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer userAuthId;
+
+    /**
+     * 用户Id
+     */
     private Integer userId;
 
     /**
@@ -27,29 +34,14 @@ public class UserInfo {
     private String username;
 
     /**
-     * 头像id
+     * 密码
      */
-    private Integer profileImg;
+    private String password;
 
     /**
-     * 邮箱
+     * 权限类型
      */
-    private String email;
-
-    /**
-     * 性别
-     */
-    private String gender;
-
-    /**
-     * 用户状态
-     */
-    private String enableStatus;
-
-    /**
-     * 用户类型
-     */
-    private String userType;
+    private String authType;
 
     /**
      * 创建时间

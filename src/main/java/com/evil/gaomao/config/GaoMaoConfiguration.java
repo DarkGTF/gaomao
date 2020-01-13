@@ -17,6 +17,7 @@ public class GaoMaoConfiguration {
 
     @Autowired
     public void setProperties(GaoMaoProperties properties) {
+
         this.properties = properties;
     }
 }

@@ -1,4 +1,4 @@
-package com.evil.gaomao.controller;
+package com.evil.gaomao.auth.controller;
 
 /**
  * 登录相关操作 控制器

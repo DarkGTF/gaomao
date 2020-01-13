@@ -1,18 +1,17 @@
-package com.evil.gaomao.controller;
+package com.evil.gaomao.blog.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 用户注册相关操作 控制器
- *
- * @author fangjiaxiaobai@gmail.com
- * @date 2019-12-24
+ * @author dc
+ * @date 2020-01-13
  * @since 1.0.0
  */
-@Slf4j
 @RestController
-public class RegisterController {
+@Slf4j
+@RequestMapping(value = "article")
+public class ArticleController {
 
 }
