@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.*;
 @Api
 @Slf4j
 @RestController
+@RequestMapping("/auth")
 public class LoginController {
 
     private JwtUtil jwtUtil;
@@ -35,12 +36,14 @@ public class LoginController {
     /**
      * 事件发布器
      */
-    ApplicationEventPublisher applicationEventPublisher;
+    private ApplicationEventPublisher applicationEventPublisher;
 
     public LoginController(JwtUtil jwtUtil,
-                           @Qualifier("userService") UserDetailsService userDetailsService) {
+                           @Qualifier("userService") UserDetailsService userDetailsService,
+                           ApplicationEventPublisher applicationEventPublisher) {
         this.jwtUtil = jwtUtil;
         this.userDetailsService = userDetailsService;
+        this.applicationEventPublisher = applicationEventPublisher;
     }
 
 

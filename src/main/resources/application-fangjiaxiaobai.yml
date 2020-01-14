@@ -50,6 +50,7 @@ gaomao:
   url:
     notfilter:
       urls:
+        - "/auth/**"
         - "/login"
         - "/login**"
         - "/app/getVerificationCode"
