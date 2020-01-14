@@ -42,7 +42,7 @@ public class RestResult<T> {
      * @return 响应成功的Result
      */
     public static <R> RestResult<R> newInstance() {
-        return new RestResult<>(true);
+        return new RestResult<R>(true);
     }
 
     /**
@@ -53,7 +53,7 @@ public class RestResult<T> {
      * @return 响应数据, 响应成功的Result
      */
     public static <R> RestResult<R> newSuccessInstance(R r) {
-        return new RestResult<>(true, r);
+        return new RestResult<R>(true, r);
     }
 
     /**
@@ -64,7 +64,7 @@ public class RestResult<T> {
      * @return 响应数据, 响应成功的Result
      */
     public static <R> RestResult<R> newSuccessInstance(int code, String msg) {
-        return new RestResult<>(code, true, msg);
+        return new RestResult<R>(code, true, msg);
     }
 
     public RestResult<T> withCode(Integer code){
@@ -80,7 +80,7 @@ public class RestResult<T> {
      * @return 响应数据, 响应失败的Result
      */
     public static <R> RestResult<R> newFailureInstance(R r) {
-        return new RestResult<>(false, r);
+        return new RestResult<R>(false, r);
     }
 
     /**
@@ -102,7 +102,7 @@ public class RestResult<T> {
      * @return 响应数据, 响应失败的Result
      */
     public static <R> RestResult<R> newFailureInstance(int code, String msg) {
-        return new RestResult<>(code, false, msg);
+        return new RestResult<R>(code, false, msg);
     }
 
     /**
@@ -113,7 +113,7 @@ public class RestResult<T> {
      * @return Result
      */
     public static <R> RestResult<R> newInstance(Boolean status) {
-        return new RestResult<>(status);
+        return new RestResult<R>(status);
     }
 
     private RestResult(Integer code, boolean succeed, String message) {

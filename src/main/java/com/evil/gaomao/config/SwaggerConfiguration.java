@@ -23,7 +23,7 @@ public class SwaggerConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.evil.gaomao.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.evil.gaomao"))
                 .paths(PathSelectors.any())
                 .build();
     }

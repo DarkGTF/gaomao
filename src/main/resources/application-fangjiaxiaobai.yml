@@ -50,11 +50,12 @@ gaomao:
   url:
     notfilter:
       urls:
-      - "/login**"
-      - "/app/getVerificationCode"
-      - "/app/login"
-      - "/doLogin**"
-      - "/favicon.ico"
+        - "/login"
+        - "/login**"
+        - "/app/getVerificationCode"
+        - "/app/login"
+        - "/doLogin**"
+        - "/favicon.ico"
   jwt:
     expiration: 6000
     secret: gaomao
